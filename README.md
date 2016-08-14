@@ -19,8 +19,8 @@ print predictor(res_image)
 
 The above will print a class label, (Aesthetic/Not Aesthetic)
 
-Note: The 'factored' folder consists of 250X250X3 images scraped from the AVA/imagechallenge dataset(http://www.lucamarchesotti.com), which can be used for training purposes. The images that were originally downloaded were cropped to bring to 250*250*3. I would recommend downloading more images, particularly if you have a GPU, and are not constrained by training time.
+Note: The 'factored' folder consists of 250X250X3 images scraped from the AVA/imagechallenge dataset(http://www.lucamarchesotti.com), which can be used for training purposes. The images that were originally downloaded were cropped to bring to 250X250X3. I would recommend downloading more images, particularly if you have a GPU, and are not constrained by training time.
 
 Dependencies: Theano, Numpy, urllib, cv2(opencv in python).  
 
-scrap.py has the code for the scrapper that I used to get data, and consequently crop and process it to 250*250*3 px. You can use it as a reference or write your own. In case this in violation of AVA's guidelines, please let me know and I will remove it.
+scrap.py has the code for the scrapper that I used to get data, and consequently crop and process it to 250X250X3 px. You can use it as a reference or write your own. In case this in violation of AVA's guidelines, please let me know and I will remove it.
