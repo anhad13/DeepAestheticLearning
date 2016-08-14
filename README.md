@@ -7,8 +7,11 @@ To train the CNN:
 
 import build_model
 predictor = build_model.trainly(<path_of_images_folder_for_training>, <no_of_epochs>)
+
 The predictor object stores the trained model, and can be used for predicting whether a particular image is aesthetic or not, like so:
+
 import cv2
+
 res_image=cv2.imread(<path_of_test_ime>).reshape(-1,3,250,250)
 print predictor(es_image)
 The above will print a class label, (Aesthetic/Not Aesthetic)
