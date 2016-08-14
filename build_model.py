@@ -23,11 +23,11 @@ def trainly(doc_root, no_of_epochs):
 	train = theano.function(inputs=[X, Y], outputs=cost, updates=updates, allow_input_downcast=True)
 	predict = theano.function(inputs=[X], outputs=y_x, allow_input_downcast=True)
 	for i in range(int(no_of_epochs)):
-		print "Staring Epoch: "+str(i)
+		print "Staring Epoch: "+str(i+1)
 		for start, end in zip(range(0, len(trX), 10), range(10, len(trX), 10)):
 			print "Processing batch: "+str(start)+" to "+str(end)
 			cost = train(trX[start:end], trY[start:end])
-	return predict		
+	return predict
 def load_training_set(doc_root):
 	file=open("AVA.txt","r")
 	lines=file.readlines()
